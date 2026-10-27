@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Self-hosted fonts: latin + cyrillic subsets only */
+@font-face { font-family: 'Oswald'; font-weight: 500; font-display: swap; src: url('./fonts/oswald-cyrillic-500-normal.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Oswald'; font-weight: 500; font-display: swap; src: url('./fonts/oswald-latin-500-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Oswald'; font-weight: 600; font-display: swap; src: url('./fonts/oswald-cyrillic-600-normal.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Oswald'; font-weight: 600; font-display: swap; src: url('./fonts/oswald-latin-600-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Oswald'; font-weight: 700; font-display: swap; src: url('./fonts/oswald-cyrillic-700-normal.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Oswald'; font-weight: 700; font-display: swap; src: url('./fonts/oswald-latin-700-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Manrope'; font-weight: 400; font-display: swap; src: url('./fonts/manrope-cyrillic-400-normal.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Manrope'; font-weight: 400; font-display: swap; src: url('./fonts/manrope-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Manrope'; font-weight: 500; font-display: swap; src: url('./fonts/manrope-cyrillic-500-normal.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Manrope'; font-weight: 500; font-display: swap; src: url('./fonts/manrope-latin-500-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Manrope'; font-weight: 600; font-display: swap; src: url('./fonts/manrope-cyrillic-600-normal.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Manrope'; font-weight: 600; font-display: swap; src: url('./fonts/manrope-latin-600-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Manrope'; font-weight: 700; font-display: swap; src: url('./fonts/manrope-cyrillic-700-normal.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Manrope'; font-weight: 700; font-display: swap; src: url('./fonts/manrope-latin-700-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Marck Script'; font-weight: 400; font-display: swap; src: url('./fonts/marck-script-cyrillic-400-normal.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Marck Script'; font-weight: 400; font-display: swap; src: url('./fonts/marck-script-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; line-height: normal; }
+  body { @apply m-0 bg-paper font-sans text-ink antialiased; }
+  a { @apply text-wine no-underline; }
+  a:hover { @apply text-wine-hover; }
+  ::selection { @apply bg-wine text-paper; }
+  :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  /* Buttons keep the UA font (design arrows ← → render in system-ui) */
+  button { line-height: normal; }
+}
+
+@layer components {
+  .cq { container-type: inline-size; }
+  .px-gutter { padding-left: clamp(24px, 4.4cqi, 64px); padding-right: clamp(24px, 4.4cqi, 64px); }
+  .-mx-gutter { margin-left: calc(-1 * clamp(24px, 4.4cqi, 64px)); margin-right: calc(-1 * clamp(24px, 4.4cqi, 64px)); }
+  /* Hero bottom padding and the about photo pulled up into it share one value */
+  .hero-pad { padding-top: clamp(28px, 3.4cqi, 52px); padding-bottom: calc(56px + clamp(0px, calc((100cqi - 760px) * 10), 200px)); }
+  .hero-photo { margin-top: calc(clamp(64px, 24cqi, 360px) * .5); }
+  .about-pull { margin-top: calc(-1 * (clamp(64px, 8cqi, 120px) + clamp(0px, calc((100cqi - 760px) * 10), 200px))); }
+
+  .h2 { @apply m-0 font-display font-bold uppercase; font-size: clamp(52px, 8.4cqi, 132px); line-height: .92; letter-spacing: -.005em; text-wrap: balance; }
+  .h2-m { @apply m-0 font-display font-bold uppercase; font-size: 52px; line-height: .95; overflow-wrap: anywhere; }
+
+  .link-u { @apply font-semibold; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1.5px; transition: opacity .2s; }
+  .link-u:hover { opacity: .7; }
+
+  .btn { @apply inline-flex items-center justify-center whitespace-nowrap rounded-[2px] font-semibold; height: 58px; padding: 0 30px; font-size: 16px; transition: opacity .2s; }
+  .btn:hover { opacity: .88; }
+
+  .row { padding: 12px 0; font-size: 16px; line-height: 1.5; break-inside: avoid; border-top: 1px solid; }
+
+  .zoom-img { transition: transform .6s ease; }
+  button:hover > picture > .zoom-img, button:hover > .zoom-img { transform: scale(1.03); }
+
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; scroll-behavior: auto !important; }
+}

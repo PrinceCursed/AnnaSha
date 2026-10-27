@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { hero, links, site, ui, footerLinks } from '../content';
 import { nameGlyphs } from '../glyphs.gen';
 import { Picture } from '../components/Picture';
@@ -14,6 +15,21 @@ function Title({ className }: { className: string }) {
   );
 }
 
+// Directions line: caps with tracking; wraps only at the «·» separators.
+function Roles({ className }: { className: string }) {
+  const items = hero.roles.split(' · ');
+  return (
+    <p className={`m-0 font-semibold uppercase tracking-[.06em] text-wine [text-wrap:balance] ${className}`}>
+      {items.map((t, i) => (
+        <Fragment key={t}>
+          {i > 0 && ' '}
+          <span className="whitespace-nowrap">{t}{i < items.length - 1 && '\u00A0·'}</span>
+        </Fragment>
+      ))}
+    </p>
+  );
+}
+
 export function HeroDesktop() {
   return (
     <section id="s-top" className="hero-pad relative px-gutter">
@@ -27,7 +43,7 @@ export function HeroDesktop() {
           </div>
         </div>
         <div className="col-start-1 row-start-2 flex max-w-[540px] flex-col gap-6 pt-[clamp(32px,3.6cqi,56px)]">
-          <p className="m-0 text-[clamp(17px,1.35cqi,20px)] font-semibold text-wine">{hero.roles}</p>
+          <Roles className="text-[clamp(17px,1.35cqi,20px)]" />
           <p className="m-0 text-[clamp(20px,1.8cqi,26px)] font-medium leading-[1.4] text-ink [text-wrap:pretty]">{hero.lead}</p>
           <p className="m-0 text-[16px] leading-[1.6] text-muted">{hero.note}</p>
           <div className="mt-2 flex flex-wrap items-center gap-x-7 gap-y-4">
@@ -64,7 +80,7 @@ export function HeroMobile() {
       <div className="relative mt-6 aspect-[4/5] overflow-hidden bg-portrait">
         <Picture name="portrait" alt={hero.portraitAlt} sizes="calc(100vw - 40px)" priority className="absolute inset-0 block h-full w-full object-cover object-[50%_40%]" />
       </div>
-      <p className="m-0 mt-6 text-[15px] font-semibold leading-[1.5] text-wine">{hero.roles}</p>
+      <Roles className="mt-6 text-[15px] leading-[1.5]" />
       <p className="m-0 mt-3 text-[21px] font-medium leading-[1.4] text-ink [text-wrap:pretty]">{hero.lead}</p>
       <p className="m-0 mt-3 text-[16px] leading-[1.5] text-muted">{hero.noteMobile}</p>
       <a href={links.telegram} {...external} className="btn mt-7 flex h-14 w-full bg-wine text-paper hover:text-paper">{ui.writeTelegram}</a>
